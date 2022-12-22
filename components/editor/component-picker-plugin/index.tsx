@@ -27,6 +27,7 @@ import {
   FORMAT_ELEMENT_COMMAND,
   TextNode,
 } from "lexical";
+import {$setBlocksType_experimental} from '@lexical/selection';
 import { useCallback, useMemo, useState } from "react";
 import * as ReactDOM from "react-dom";
 
@@ -158,8 +159,11 @@ export default function ComponentPickerMenuPlugin(): JSX.Element {
         onSelect: () =>
           editor.update(() => {
             const selection = $getSelection();
+            
             if ($isRangeSelection(selection)) {
-              $createParagraphNode();
+              $setBlocksType_experimental(selection, () =>
+              $createParagraphNode(),
+            );
             }
           }),
       }),
@@ -172,9 +176,10 @@ export default function ComponentPickerMenuPlugin(): JSX.Element {
               editor.update(() => {
                 const selection = $getSelection();
                 if ($isRangeSelection(selection)) {
-                  console.log("test", n);
-                  // @ts-ignore Correct types, but since they're dynamic TS doesn't like it.
-                  $createHeadingNode(`h${n}`);
+                  $setBlocksType_experimental(selection, () =>
+                    // @ts-ignore Correct types, but since they're dynamic TS doesn't like it.
+                    $createHeadingNode(`h${n}`),
+                  );
                 }
               }),
           })
