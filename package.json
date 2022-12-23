@@ -13,6 +13,7 @@
     "@lexical/react": "^0.7.4",
     "@lexical/rich-text": "^0.7.4",
     "@lexical/selection": "^0.7.4",
+    "@lexical/utils": "^0.7.4",
     "@types/node": "18.11.15",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.9",

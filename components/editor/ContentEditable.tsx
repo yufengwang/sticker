@@ -1,5 +1,5 @@
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
-import styles from "./ContentEditable.module.css";
+import styles from "./contentEditable.module.css";
 
 export default function LexicalContentEditable({
   className,

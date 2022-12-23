@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from "./Placeholder.module.css";
+import styles from "./placeholder.module.css";
 
 export default function Placeholder({
   children,
