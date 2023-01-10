@@ -1,14 +1,10 @@
-import dynamic from "next/dynamic";
-import styles from "../styles/Home.module.css";
-
-const Editor = dynamic(() => import("../components/editor"), {
-  ssr: false,
-});
+import Sticker from "components/sticker";
+import styles from "styles/home.module.css";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Editor></Editor>
+      <Sticker></Sticker>
     </div>
   );
 }

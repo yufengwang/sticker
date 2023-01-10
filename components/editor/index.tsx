@@ -5,7 +5,7 @@ import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { LexicalComposer } from "@lexical/react/LexicalComposer";
 import { ListPlugin } from "@lexical/react/LexicalListPlugin";
 import { CheckListPlugin } from "@lexical/react/LexicalCheckListPlugin";
-import ContentEditable from "./contentEditable";
+import ContentEditable from "./content-editable";
 import Placeholder from "./placeholder";
 import nodes from "./nodes";
 import theme from "./theme";
@@ -66,7 +66,7 @@ const Editor = () => {
         <ComponentPickerPlugin />
         <MyCustomAutoFocusPlugin />
         <CheckListPlugin />
-        <HorizontalRulePlugin/>
+        <HorizontalRulePlugin />
         <ListPlugin />
       </div>
     </LexicalComposer>
